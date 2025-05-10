@@ -7,6 +7,8 @@ import ConsultaCEP from "./src/pages/ConsultaCEP";
 import ConsultaCNPJ from "./src/pages/ConsultaCNPJ";
 import Produto from "./src/pages/Produto";
 import ConsultaProduto from "./src/pages/ConsultaProduto";
+import EditProdutos from "./src/pages/EditProdutos";
+import DeletProdutos from "./src/pages/DeletProdutos";
 
 const Stack=createStackNavigator();
 
@@ -20,6 +22,8 @@ export default function App() {
         <Stack.Screen name="ConsultaCNPJ" component={ConsultaCNPJ}/>
         <Stack.Screen name="Produto" component={Produto}/>
         <Stack.Screen name="ConsultaProduto" component={ConsultaProduto}/>
+        <Stack.Screen name="EditProdutos" component={EditProdutos}/>
+        <Stack.Screen name="DeletProdutos" component={DeletProdutos}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

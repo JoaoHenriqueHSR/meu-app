@@ -1,15 +1,18 @@
-import { View, FlatList, Text} from "react-native";
+import { View, FlatList} from "react-native";
 import styles from "./style";
-import ButtonLarger from "../../components/ButtonLarge";
 import { useState } from "react";
 import { useEffect } from "react";
 import apiProduto from "../../services/ProdutoApi";
 import LoadingModal from "../LoadingModal";
+import ProdutcItem from "../../components/ProductItem";
 
-export default function ConsultaProduto(){
+export default function ConsultaProduto({navigation}){
     const[loading, setLoading]=useState(false);
     const[dados, setDados]=useState([]);
     //quando a tela carregar chama a função consultar dados
+    useEffect(()=>{
+        buscarDados();
+    }, []);
     //[] vazio significa que vai executar uma vez, quando a tela carregar
     
 
@@ -24,19 +27,18 @@ export default function ConsultaProduto(){
         }
         setLoading(false);
     }
+    function editar(){
+        navigation.navigate("EditProdutos");
+    }
+
+    function delet(){
+        navigation.navigate("DeletProdutos")
+    }
     return(
         <View style={styles.container}>
-            <ButtonLarger text={"Consultar"} onPress={buscarDados}/>
             <FlatList data={dados} keyExtractor={(item)=>item.id} renderItem={({item})=>{
                 return(
-                <View>
-                    <Text>
-                        {item.id}
-                        {item.descricao},
-                        {item.valor},
-                        {item.unidade}
-                    </Text>
-                </View>
+                <ProdutcItem item={item.descricao} onPressEdit={editar} onPressRemove={delet}/>
                 );
             }}/>
         <LoadingModal visible={loading}/>
