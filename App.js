@@ -9,13 +9,16 @@ import Produto from "./src/pages/Produto";
 import ConsultaProduto from "./src/pages/ConsultaProduto";
 import EditProdutos from "./src/pages/EditProdutos";
 import DeletProdutos from "./src/pages/DeletProdutos";
+import BoasVindas from "./src/pages/RotinasBoasVindas";
+import Principal from "./src/pages/RotinasPrincipal";
+import RotinaCadastro from "./src/pages/RotinasCadastrar";
 
 const Stack=createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Produto">
+      <Stack.Navigator initialRouteName="BoasVindas">
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Calc" component={Calc}/>
         <Stack.Screen name="ConsultaCEP" component={ConsultaCEP}/>
@@ -24,6 +27,9 @@ export default function App() {
         <Stack.Screen name="ConsultaProduto" component={ConsultaProduto}/>
         <Stack.Screen name="EditProdutos" component={EditProdutos}/>
         <Stack.Screen name="DeletProdutos" component={DeletProdutos}/>
+        <Stack.Screen name="BoasVindas" component={BoasVindas}/>
+        <Stack.Screen name="Principal" component={Principal}/>
+        <Stack.Screen name="Cadastro" component={RotinaCadastro}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
