@@ -1,7 +1,7 @@
 import { View, TextInput, Text } from "react-native";
 import styles from "./style.js";
 
-export default function InputIcon({label, placeholder, value, onChangeText}){
+export default function Input({label, placeholder, value, onChangeText}){
     return(
         <View>
             <Text>

@@ -1,7 +1,7 @@
 import { View, Image, TouchableOpacity, Text } from "react-native";
 import ButtonLarger from "../../components/ButtonLarge";
 import InputPassword from "../../components/InputPassword";
-import Input from "../../components/InputIcon";
+import Input from "../../components/Input";
 import styles from "./style";
 
 

@@ -8,19 +8,21 @@ const styles=StyleSheet.create({
         borderRadius: 12,
         flexDirection: "row",
         justifyContent: "space-between",
-        marginBottom: 16
+        marginBottom: 16,
+    },
+    containerText:{
+        justifyContent: "center",
     },
     text:{
-        justifyContent: "center"
     },
-    icon:{
-        marginLeft: 16,
-        marginVertical: 8,
-        marginRight: 4,
-    },
-    icons:{
+    buttonIcon:{
         flexDirection: "row",
         gap: 8,
+        height: "100%",
+        alignItems: "center",
+    },
+    atributos:{
+        fontWeight: "bold",
     },
 });
 

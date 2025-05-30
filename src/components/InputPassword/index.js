@@ -18,9 +18,9 @@ export default function InputPassword({ placeholder, label}){
         };
     };
     return(
-        <View>
+        <View style={styles.container}>
             <Text>{label}</Text>
-            <View style={styles.container}>
+            <View style={styles.containerInput}>
                 <TextInput style={styles.input} secureTextEntry={text} placeholder={placeholder} placeholderTextColor={"#5b5b5c"}/>
                 <TouchableOpacity onPress={passWord}>
                     <Icon style={styles.icon} name={icone} size={24} color="#000"/>

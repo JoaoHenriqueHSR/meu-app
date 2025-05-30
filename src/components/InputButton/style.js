@@ -4,13 +4,16 @@ const styles=StyleSheet.create({
     container:{
         width:"100%",
     },
-    containerInput:{
+    containerInputButton:{
         borderWidth: 1,
         borderColor: "#ccc",
         padding: 8,
         borderRadius: 12,
+        flexDirection: "column",
+    },
+    containerInput:{
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent: "space-between"
     },
     icon:{
         marginLeft: 16,
@@ -20,6 +23,12 @@ const styles=StyleSheet.create({
     input:{
         outlineStyle: "none",
         width:"100%",
+    },
+    anxImg:{
+        textDecorationLine: "underline"
+    },
+    bntImg:{
+        outlineStyle: "none"
     }
 });
 
