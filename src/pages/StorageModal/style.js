@@ -6,10 +6,19 @@ const styles=StyleSheet.create({
         backgroundColor: "rgba(0,0,0,0.5)",
         alignItems: "center",
         justifyContent: "center",
+        padding: 16
     },
-    gif:{
-        width: 100,
-        height: 100
+    containerMsg:{
+        width: "100%",
+        height: 200,
+        backgroundColor: "white",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 8
+    },
+    containerBtn:{
+        flexDirection: "row",
+        gap: 8
     }
 });
 

@@ -9,8 +9,9 @@ export default function StorageImage({route}){
     const [modalLoading, setModalLoading]=useState(false);
 
     function modal(){
-        setModalLoading(true);
+        modalLoading?setModalLoading(false):setModalLoading(true);
     }
+    
     const {nome}=route.params;
 
     return(
@@ -18,7 +19,7 @@ export default function StorageImage({route}){
             <Text>Olá {nome}</Text>
             <InputButton placeholder={"Sobre a imagem..."} icon={"send"} onPressAnex={modal}/>
             <Card texto={"Texto sobre a imagem"} icon={"heart"}/>
-            <StorageModal visible={modalLoading}/>
+            <StorageModal visible={modalLoading} txtSalvar={"Salvar"} txtCancelar={"Cancelar"} onPressCancelar={modal}/>
         </View>
     );
 };
