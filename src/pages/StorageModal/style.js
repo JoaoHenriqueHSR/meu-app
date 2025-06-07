@@ -10,7 +10,7 @@ const styles=StyleSheet.create({
     },
     containerMsg:{
         width: "100%",
-        height: 200,
+        height: 500,
         backgroundColor: "white",
         justifyContent: "center",
         alignItems: "center",
@@ -19,7 +19,11 @@ const styles=StyleSheet.create({
     containerBtn:{
         flexDirection: "row",
         gap: 8
-    }
+    },
+    img:{
+        height: 300,
+        width: 300,
+    },
 });
 
 export default styles;

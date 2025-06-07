@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "pluguins":[
+      "expo-image-picker",
+      {
+        "photosPermission":"O aplicativo precisa acessar as fotos para realizar as postagens"
+      }
+    ]
   }
 }
