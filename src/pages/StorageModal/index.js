@@ -27,7 +27,7 @@ export default function StorageModal({visible, txtEscolher, txtCancelar, onPress
                             <Image source={{uri:image}} style={styles.img}/>
                         ):
                         (
-                            <Image source={require('../../../assets/image/Avatar-Loak.jpg')} style={styles.img} />
+                            <Image source={require('../../../assets/image/default.jpg')} style={styles.img} />
                         )
                     }
                     <View style={styles.containerBtn}>

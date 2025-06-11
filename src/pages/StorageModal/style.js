@@ -18,7 +18,8 @@ const styles=StyleSheet.create({
     },
     containerBtn:{
         flexDirection: "row",
-        gap: 8
+        gap: 8,
+        paddingTop: 16
     },
     img:{
         height: 300,
