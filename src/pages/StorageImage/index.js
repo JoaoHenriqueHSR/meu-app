@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function StorageImage({route}){
     const [modalLoading, setModalLoading]=useState(false);
 
-    const {nome}=route.params;
+    const {usuario}=route.params;
 
     function modal(){
         modalLoading?setModalLoading(false):setModalLoading(true);
@@ -17,7 +17,7 @@ export default function StorageImage({route}){
 
     return(
         <View style={styles.container}>
-            <Text>Olá {nome}</Text>
+            <Text>Olá {usuario}</Text>
             <InputButton placeholder={"Sobre a imagem..."} icon={"send"} onPressAnex={modal}/>
             <Card texto={"Texto sobre a imagem"} icon={"heart"}/>
             <StorageModal visible={modalLoading} txtEscolher={"Escolher Imagem"} txtCancelar={"Cancelar"} onPressCancelar={modal}/>

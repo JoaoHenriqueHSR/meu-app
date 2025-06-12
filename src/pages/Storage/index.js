@@ -4,17 +4,13 @@ import InputPassword from "../../components/InputPassword";
 import InputIcon from "../../components/InputIcon";
 import styles from "./style";
 import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/config";
 
 
 export default function Storage({navigation}){
-    const [nome, setNome]=useState("");
-
-    
-    function AddImage(){
-        navigation.navigate("StorageImage", {nome});
-    }
+    const [usuario, setUsuario]=useState("");
+    const [senha, setSenha]=useState();
 
     async function criarUsuario(){
         let user;
@@ -22,13 +18,20 @@ export default function Storage({navigation}){
         console.log(user);
     }
 
+    async function login(){
+        let user=await signInWithEmailAndPassword(auth, usuario, senha);
+        if(user.user){
+             navigation.navigate("StorageImage", {usuario});
+        }
+    }
+
     return(
         <View style={styles.container}>
             <Image source={require('../../../assets/image/Avatar-Loak.jpg')} style={styles.img} />
-            <InputIcon label="Login:" placeholder="Nome" icone="user" onChangeText={(text)=>{setNome(text)}}/>
-            <InputPassword placeholder="Informe sua senha" label="Senha:"/>
-            <ButtonLarger text="Entrar" onPress={criarUsuario}/>
-            <ButtonLarger text="Entrar com Google" onPress={AddImage}/>
+            <InputIcon label="Login:" placeholder="Nome" icone="user" onChangeText={(text)=>{setUsuario(text)}}/>
+            <InputPassword placeholder="Informe sua senha" label="Senha:" onChangeText={(text)=>{setSenha(text)}}/>
+            <ButtonLarger text="Entrar" onPress={login}/>
+            <ButtonLarger text="Entrar com Google"/>
         </View>
     );
 };
