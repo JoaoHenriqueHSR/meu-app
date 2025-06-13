@@ -3,15 +3,15 @@ import {StyleSheet} from "react-native";
 const styles=StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#F5F5F5",
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "#F5F5F5",
+        width: "100%",
         gap: 12,
-        padding: 12,
     },
     img:{
+        width: "100%",
         height: 300,
-        width: 300,
     },
     inputDesc:{
         width: "100%",

@@ -3,7 +3,7 @@ import Icon from "react-native-vector-icons/Feather";
 import styles from "./style.js"
 import { useState } from "react";
 
-export default function InputPassword({ placeholder, label, onChangeText}){
+export default function InputPassword({ placeholder, label, onChangeText, value}){
 
     const [icone, setIcone]=useState("eye-off");
     const [text, setText]=useState(true);
@@ -21,7 +21,7 @@ export default function InputPassword({ placeholder, label, onChangeText}){
         <View style={styles.container}>
             <Text>{label}</Text>
             <View style={styles.containerInput}>
-                <TextInput style={styles.input} secureTextEntry={text} placeholder={placeholder} placeholderTextColor={"#5b5b5c"} onChangeText={onChangeText}/>
+                <TextInput style={styles.input} secureTextEntry={text} placeholder={placeholder} placeholderTextColor={"#5b5b5c"} onChangeText={onChangeText} value={value}/>
                 <TouchableOpacity onPress={passWord}>
                     <Icon style={styles.icon} name={icone} size={24} color="#000"/>
                 </TouchableOpacity>
